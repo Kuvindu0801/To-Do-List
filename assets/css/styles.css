@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -6,55 +6,62 @@
 }
 
 
-.container{
+.container {
 
-    background:linear-gradient(135deg,#153677,#4e085f);
+    background: linear-gradient(135deg, #7498e0, #bda1c4);
     min-height: 100vh;
     width: 100%;
     padding: 10px;
- 
+
 }
-.todo-app{
+
+.todo-app {
     width: 100%;
     max-width: 540px;
     margin: 100px auto 20px;
     padding: 20px;
     background: white;
-    border-radius:10px;
+    border-radius: 10px;
     display: grid;
 
 }
-.topic{
+
+.topic {
     display: flex;
     gap: 10px;
 }
-.topic h2{
+
+.topic h2 {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     font-size: 30px;
 
 }
-img{
+
+img {
     width: 40px;
     height: 40px;
 }
-.input-container{
+
+.input-container {
     display: flex;
     background: rgb(225, 225, 225);
     border-radius: 30px;
     padding-left: 20px;
 
 }
-input{
+
+input {
     flex: 1;
-    border:none;
-    outline:none;
+    border: none;
+    outline: none;
     background: transparent;
     padding: 10px;
     font-size: 16px;
 }
- button{
+
+button {
     background: orangered;
     color: white;
     font-size: 16px;
@@ -63,38 +70,75 @@ input{
     cursor: pointer;
     border-radius: 40px;
     padding: 16px 50px;
-    
+
 }
-.list-container{
+
+.list-container {
     padding: 10px;
     margin: 10px;
-    
+
 }
- .list-container li{
+
+.list-container li {
     list-style: none;
-    font-size: 17px;
+    font-size: 18px;
     padding: 12px 8px 12px 50px;
     position: relative;
     user-select: none;
     cursor: pointer;
 }
-li::before{
-    position:absolute;
+
+.list-container li::before {
+    content: "";
+    position: absolute;
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image: url(assets/img/unchecked.png);
     background-size: cover;
-    background-position:center;
-    top:12px;
+    background-position: center;
+    top: 12px;
     left: 8px;
 }
-ul li.checked{
-    color:#555;
+
+
+.list-container li.checked {
+    color: #555;
     text-decoration: line-through;
 
 }
-ul li.checked::before{
-    background-image: url(assets/img/checked.png);
 
+
+.list-container li .tick {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+    color: #555;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    background: orangered;
+    color: white;
+    border-radius: 50%;
+
+}
+
+.list-container li .delete {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    color: #555;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+
+}
+
+.list-container li .delete:hover {
+    background: red;
+    color: white;
+    border-radius: 50%;
 }
